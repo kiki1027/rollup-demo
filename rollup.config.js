@@ -7,7 +7,7 @@ import pkg from './package.json';
 
 const commonOutput = {
   name: 'blComponent',
-  globals: { react: 'React', 'react-dom': 'ReactDOM', antd: 'antd' },
+  // globals: { react: 'React', 'react-dom': 'ReactDOM', antd: 'antd' },
 };
 
 export default {
@@ -23,7 +23,7 @@ export default {
       plugins: [terser()],
     },
   ].map((conf) => ({ ...commonOutput, ...conf })),
-  external: ['react', 'react-dom', 'antd'],
+  // external: ['react', 'react-dom', 'antd'],
   plugins: [
     commonjs(),
     nodeResolve(),
